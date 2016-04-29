@@ -1,0 +1,50 @@
+#inlude<iostream>
+ using std::cout;
+  using std::endl;
+  
+ class Point{
+  private:
+  	double x;
+  	double y;
+  
+  public:
+	Point(double a=0, double b=0): x(a), y(b) {}
+ Point get(){
+ 		Point a(x, y);
+ 		return a;
+  	}
+ ~Point(){}
+  };
+  
+//shape class is virtual as its default for our actual shapes
+class Shape {
+
+virtual ~Shape() = default; //destructs to default
+
+virtual bool contains(const Point & p); //virtual function to determine a point 
+
+}
+
+class Rectangle : Shape() {
+	
+}
+
+class Ellipse : Shape() {
+	
+}
+
+class Square : Rectangle() {
+	
+}
+
+class Cirlce : Ellipse() {
+	
+}
+
+ int main(){
+  	Point a(2.2, 4.4);
+  	Point b;
+  	cout << "a" << endl;
+ }
+Status API Training Shop Blog About
+© 2016 GitHub, Inc. Terms Privacy Security Contact Help
